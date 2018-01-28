@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+<layout>
 
-    <org.bottomnav.BottomNavMenu
-        android:id="@+id/bottom_nav"
+    <data>
+
+        <variable
+            name="activity"
+            type="org.bottomnav.examples.MainActivity" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</LinearLayout>
+        <org.bottomnav.BottomNavMenu
+            style="@style/CustomBottomNavStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:setItems="@{activity.items}"
+            app:setOnClickItem="@{activity.listener}" />
+
+    </LinearLayout>
+
+</layout>

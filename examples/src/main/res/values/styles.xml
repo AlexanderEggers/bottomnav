@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="CustomBottomNavStyle" >
+        <item name="backgroundColor">@color/colorPrimary</item>
+        <item name="itemColor">@color/colorAccent</item>
+    </style>
+
 </resources>

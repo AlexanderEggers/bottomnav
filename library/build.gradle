@@ -32,7 +32,7 @@ android {
     buildToolsVersion "27.0.3"
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 16
         versionName "1.0.0-alpha1"
         consumerProguardFiles 'proguard-rules.pro'
     }
@@ -57,7 +57,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     //Support lib dependencies
-    implementation 'com.android.support:support-annotations:27.0.2'
     api 'com.android.support:support-v4:27.0.2'
 }
 

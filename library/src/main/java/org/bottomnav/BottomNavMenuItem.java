@@ -5,9 +5,18 @@ public class BottomNavMenuItem {
     private CharSequence title;
     private int icon;
 
-    public BottomNavMenuItem(CharSequence title, int icon) {
-        this.title = title;
+    public static BottomNavMenuItem create() {
+        return new BottomNavMenuItem();
+    }
+
+    public BottomNavMenuItem setIcon(int icon) {
         this.icon = icon;
+        return this;
+    }
+
+    public BottomNavMenuItem setTitle(CharSequence title) {
+        this.title = title;
+        return this;
     }
 
     public CharSequence getTitle() {
