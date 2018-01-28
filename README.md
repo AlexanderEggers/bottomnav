@@ -21,12 +21,10 @@ Compatibility
 -------------
 
  * **Minimum Android SDK**: BottomNav requires a minimum API level of 14.
- * **Compile Android SDK**: BottomNav requires you to compile against API 27.
  
 TODO
 -------------
 * Implemenation
-* Unit testing
 * Full documentation (source code and wiki)
 
 Author
