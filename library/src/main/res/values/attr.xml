@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="bottomnav" >
+        <attr name="backgroundColor" format="color" />
+        <attr name="itemColor" format="color|integer" />
+    </declare-styleable>
+
+</resources>

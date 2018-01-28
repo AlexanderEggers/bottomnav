@@ -1,0 +1,4 @@
+include ':examples', ':library'
+project(":library").name = "BottomNav"
+project(":examples").name = "Examples"
+rootProject.name = "BottomNav-Library"
