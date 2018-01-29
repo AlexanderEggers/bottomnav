@@ -37,22 +37,23 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
 
     public BottomNavMenu(Context context) {
         super(context);
-        initComponent();
+        initComponent(context);
     }
 
     public BottomNavMenu(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        initComponent();
-        if (attrs != null) initAttributes(attrs);
+        readAttributes(context, attrs);
+        initComponent(context);
     }
 
-    protected void initComponent() {
-        inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflate(getContext(), R.layout.bottomnav_layout, null);
+    public BottomNavMenu(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        readAttributes(context, attrs);
+        initComponent(context);
     }
 
-    protected void initAttributes(AttributeSet attrs) {
-        TypedArray a = getContext().getTheme().obtainStyledAttributes(
+    protected void readAttributes(Context context, AttributeSet attrs) {
+        TypedArray a = context.getTheme().obtainStyledAttributes(
                 attrs,
                 R.styleable.bottomnav,
                 0, 0);
@@ -65,12 +66,12 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
 
             itemBackground = a.getDrawable(R.styleable.bottomnav_itemBackground);
             if(itemBackground == null) {
-                itemBackground = ContextCompat.getDrawable(getContext(), R.drawable.default_item_background);
+                itemBackground = ContextCompat.getDrawable(context, R.drawable.default_item_background);
             }
 
             Drawable menuBackground = a.getDrawable(R.styleable.bottomnav_menuBackground);
             if(menuBackground == null) {
-                menuBackground = ContextCompat.getDrawable(getContext(), R.drawable.default_item_background);
+                menuBackground = ContextCompat.getDrawable(context, R.drawable.default_item_background);
             }
             setBackground(menuBackground);
 
@@ -78,6 +79,11 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
         } finally {
             a.recycle();
         }
+    }
+
+    protected void initComponent(Context context) {
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflate(context, R.layout.bottomnav_layout, null);
     }
 
     public void addOnItemClickListener(@NonNull OnClickItemListener listener) {
