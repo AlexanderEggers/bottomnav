@@ -2,8 +2,10 @@
 <resources>
 
     <declare-styleable name="bottomnav">
-        <attr name="backgroundColor" format="color|reference" />
-        <attr name="itemColor" format="color|reference" />
+        <attr name="menuBackground" format="color|reference" />
+        <attr name="itemBackground" format="color|reference" />
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension" />
     </declare-styleable>
 
 </resources>

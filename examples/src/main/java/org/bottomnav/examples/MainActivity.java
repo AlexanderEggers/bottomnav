@@ -29,7 +29,11 @@ public class MainActivity extends AppCompatActivity {
         ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setActivity(this);
 
-        items.add(BottomNavMenuItem.create().setIcon(android.R.drawable.star_big_off).setTitle("Test"));
+        items.add(BottomNavMenuItem.create().setIcon(android.R.drawable.arrow_down_float).setTitle("Test 1"));
+        items.add(BottomNavMenuItem.create().setIcon(android.R.drawable.ic_menu_share).setTitle("Test 2"));
+        items.add(BottomNavMenuItem.create().setIcon(android.R.drawable.ic_input_get).setTitle("Test 3"));
+        items.add(BottomNavMenuItem.create().setIcon(android.R.drawable.ic_media_play).setTitle("Test 4"));
+        items.add(BottomNavMenuItem.create().setIcon(android.R.drawable.star_big_off).setTitle("Test 5"));
     }
 
     public ObservableList<BottomNavMenuItem> getItems() {
