@@ -1,11 +1,21 @@
 BottomNav
 =====
 
+[![Download](https://api.bintray.com/packages/mordag/android/bottomnav/images/download.svg) ](https://bintray.com/mordag/android/bottomnav/_latestVersion)
+
 BottomNav is a custom implementation of the Android bottom navigation.
 
 Download
 --------
-Coming soon!
+```gradle
+repositories {
+  jcenter()
+}
+
+dependencies {
+  implementation 'org.bottomnav:BottomNav:1.0.0-alpha1'
+}
+```
 
 How do I use BottomNav? (Step-by-step introduction for 1.0.0-alpha1)
 -------------------
@@ -20,11 +30,11 @@ Comments/bugs/questions/pull requests are always welcome!
 Compatibility
 -------------
 
- * **Minimum Android SDK**: BottomNav requires a minimum API level of 14.
+ * **Minimum Android SDK**: BottomNav requires a minimum API level of 16.
  
 TODO
 -------------
-* Implemenation
+* Implementation
 * Full documentation (source code and wiki)
 
 Author
