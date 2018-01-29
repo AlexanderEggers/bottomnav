@@ -2,10 +2,10 @@ apply plugin: 'com.android.library'
 
 ext {
     bintrayRepo = 'android'
-    bintrayName = 'BottomNav'
+    bintrayName = 'bottomnav'
 
     publishedGroupId = 'org.bottomnav'
-    libraryName = 'BottomNav'
+    libraryName = 'bottomnav'
     artifact = 'BottomNav'
 
     libraryDescription = 'Custom implementation of the Android bottom navigation.'
