@@ -29,9 +29,13 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
     private final List<Integer> itemViews = new ArrayList<>();
 
     private LayoutInflater inflater;
+
+    private Integer itemBackgroundColor;
     private int itemBackground;
 
-    private Integer textColor;
+    private Drawable menuBackground;
+    private int menuBackgroundColor;
+
     private ColorStateList colorStateList;
     private float textSize;
 
@@ -50,6 +54,12 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
         super(context, attrs, defStyleAttr);
         readAttributes(context, attrs);
         initComponent(context);
+
+        if(menuBackgroundColor != -1) {
+            setBackgroundColor(menuBackgroundColor);
+        } else {
+            setBackground(menuBackground);
+        }
     }
 
     protected void readAttributes(Context context, AttributeSet attrs) {
@@ -60,20 +70,12 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
 
         try {
             colorStateList = a.getColorStateList(R.styleable.bottomnav_textColor);
-            if(colorStateList == null) {
-                textColor = a.getColor(R.styleable.bottomnav_textColor, Color.BLACK);
-            }
 
-            itemBackground = a.getResourceId(R.styleable.bottomnav_itemBackground, 0);
-//            if(itemBackground == null) {
-//                itemBackground = ContextCompat.getDrawable(context, R.drawable.default_item_background);
-//            }
+            itemBackgroundColor = a.getColor(R.styleable.bottomnav_itemBackgroundColor, -1);
+            itemBackground = a.getResourceId(R.styleable.bottomnav_itemBackground, -1);
 
-            Drawable menuBackground = a.getDrawable(R.styleable.bottomnav_menuBackground);
-            if(menuBackground == null) {
-                menuBackground = ContextCompat.getDrawable(context, R.drawable.default_item_background);
-            }
-            setBackground(menuBackground);
+            menuBackground = a.getDrawable(R.styleable.bottomnav_menuBackground);
+            menuBackgroundColor = a.getColor(R.styleable.bottomnav_itemBackgroundColor, -1);
 
             textSize = a.getDimension(R.styleable.bottomnav_textSize,-1);
         } finally {
@@ -113,18 +115,18 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
 
         icon.setImageDrawable(iconDrawable);
         text.setText(title);
+        text.setTextColor(colorStateList);
 
         if(textSize != -1) {
             text.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         }
 
-        if(colorStateList != null) {
-            text.setTextColor(colorStateList);
+        if(itemBackgroundColor != -1) {
+            itemView.setBackgroundColor(itemBackgroundColor);
         } else {
-            text.setTextColor(textColor);
+            itemView.setBackgroundResource(itemBackground);
         }
 
-        itemView.setBackgroundResource(itemBackground);
         itemView.setOnClickListener(this);
 
         itemViews.add(itemView.hashCode());

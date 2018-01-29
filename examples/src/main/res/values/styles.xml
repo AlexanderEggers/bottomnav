@@ -9,7 +9,7 @@
     </style>
 
     <style name="CustomBottomNavStyle" >
-        <item name="menuBackground">@color/colorPrimary</item>
+        <item name="menuBackgroundColor">@color/colorPrimary</item>
         <item name="itemBackground">@drawable/color_state</item>
         <item name="textColor">@color/text_color_state</item>
         <item name="textSize">14sp</item>
