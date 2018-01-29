@@ -29,7 +29,7 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
     private final List<Integer> itemViews = new ArrayList<>();
 
     private LayoutInflater inflater;
-    private Drawable itemBackground;
+    private int itemBackground;
 
     private Integer textColor;
     private ColorStateList colorStateList;
@@ -64,10 +64,10 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
                 textColor = a.getColor(R.styleable.bottomnav_textColor, Color.BLACK);
             }
 
-            itemBackground = a.getDrawable(R.styleable.bottomnav_itemBackground);
-            if(itemBackground == null) {
-                itemBackground = ContextCompat.getDrawable(context, R.drawable.default_item_background);
-            }
+            itemBackground = a.getResourceId(R.styleable.bottomnav_itemBackground, 0);
+//            if(itemBackground == null) {
+//                itemBackground = ContextCompat.getDrawable(context, R.drawable.default_item_background);
+//            }
 
             Drawable menuBackground = a.getDrawable(R.styleable.bottomnav_menuBackground);
             if(menuBackground == null) {
@@ -124,7 +124,7 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
             text.setTextColor(textColor);
         }
 
-        itemView.setBackground(itemBackground);
+        itemView.setBackgroundResource(itemBackground);
         itemView.setOnClickListener(this);
 
         itemViews.add(itemView.hashCode());
