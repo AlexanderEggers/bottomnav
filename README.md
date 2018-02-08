@@ -3,7 +3,7 @@ BottomNav
 
 [![Download](https://api.bintray.com/packages/mordag/android/bottomnav/images/download.svg) ](https://bintray.com/mordag/android/bottomnav/_latestVersion)
 
-BottomNav is a custom implementation of the Android bottom navigation.
+BottomNav is a custom implementation of the Android bottom navigation. The final result of this library will be to copy the bottom navigation behavior and layout of the current Youtube app.
 
 Download
 --------
