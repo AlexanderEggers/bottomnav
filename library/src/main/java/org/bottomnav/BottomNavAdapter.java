@@ -16,4 +16,8 @@ public class BottomNavAdapter {
     public static void setItems(BottomNavMenu bottomNavMenu, List<BottomNavMenuItem> itemList) {
         bottomNavMenu.setItems(itemList);
     }
+
+    private BottomNavAdapter() {
+        //do nothing
+    }
 }

@@ -3,7 +3,6 @@ package org.bottomnav;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -18,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BottomNavMenu extends LinearLayout implements View.OnClickListener {
@@ -39,13 +39,8 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
     private ColorStateList colorStateList;
     private float textSize;
 
-    public BottomNavMenu(Context context) {
-        super(context);
-        initComponent(context);
-    }
-
     public BottomNavMenu(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
+        super(context, attrs, 0);
         readAttributes(context, attrs);
         initComponent(context);
     }
@@ -88,8 +83,8 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
         inflate(context, R.layout.bottomnav_layout, null);
     }
 
-    public void addOnItemClickListener(@NonNull OnClickItemListener listener) {
-        externalListeners.add(listener);
+    public void addOnItemClickListener(@NonNull OnClickItemListener...listener) {
+        externalListeners.addAll(Arrays.asList(listener));
     }
 
     public void setItems(@NonNull List<BottomNavMenuItem> bottomNavMenuItems) {
