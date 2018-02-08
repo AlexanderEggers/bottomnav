@@ -21,7 +21,6 @@ How do I use BottomNav? (Step-by-step introduction for 1.0.0-alpha1)
 -------------------
 Simple example (more coming soon):
 ```
-//
 <org.bottomnav.BottomNavMenu
       style="@style/CustomBottomNavStyle"
       android:layout_width="match_parent"
