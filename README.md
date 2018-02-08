@@ -19,7 +19,19 @@ dependencies {
 
 How do I use BottomNav? (Step-by-step introduction for 1.0.0-alpha1)
 -------------------
-Coming soon!
+Simple example (more coming soon):
+```
+//
+<org.bottomnav.BottomNavMenu
+      style="@style/CustomBottomNavStyle"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      app:color="@color/colorAccent"
+      app:textSize="12sp"
+      app:setItems="@{activity.items}"
+      app:setOnClickItem="@{activity.listener}" />
+```
 
 Status
 ------
