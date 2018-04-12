@@ -34,7 +34,7 @@ Simple example (more coming soon):
 
 Status
 ------
-Version 1 is still in development. Updates are currently released at least monthly with new features and bug fixes. **Please keep in mind that the api is not stable yet and might change!**
+Version 1 is still in development. **Please keep in mind that the api is not stable yet and might change!**
 
 Comments/bugs/questions/pull requests are always welcome!
 
@@ -45,8 +45,9 @@ Compatibility
  
 TODO
 -------------
-* Implementation
-* Full documentation (source code and wiki)
+* Offer api to inject own item layout
+* Default layout (base and item)
+* Documentation (source code)
 
 Author
 ------
