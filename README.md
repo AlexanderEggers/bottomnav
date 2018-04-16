@@ -13,11 +13,11 @@ repositories {
 }
 
 dependencies {
-  implementation 'org.bottomnav:BottomNav:1.0.0-alpha1'
+  implementation 'org.bottomnav:BottomNav:1.0.0-beta1'
 }
 ```
 
-How do I use BottomNav? (Step-by-step introduction for 1.0.0-alpha1)
+How do I use BottomNav? (Step-by-step introduction for 1.0.0-beta1)
 -------------------
 Simple example (more coming soon):
 ```
@@ -34,7 +34,7 @@ Simple example (more coming soon):
 
 Status
 ------
-Version 1 is still in development. **Please keep in mind that the api is not stable yet and might change!**
+Version 1.0.0 is still in development.
 
 Comments/bugs/questions/pull requests are always welcome!
 
@@ -45,8 +45,8 @@ Compatibility
  
 TODO
 -------------
-* Offer api to inject own item layout
-* Default layout (base and item)
+* Allow Inject of own item layout
+* Tweaking default base/item layout
 * Documentation (source code)
 
 Author
