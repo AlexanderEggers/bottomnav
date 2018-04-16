@@ -92,13 +92,13 @@ public class BottomNavMenu extends LinearLayout implements View.OnClickListener 
     }
 
     protected void createBottomNavItems(List<BottomNavMenuItem> itemList) {
+        if(itemList.size() > MAX_SUPPORT_ITEMS) {
+            Log.d(TAG, "The BottomNavMenu component only supports up to five different menu items.");
+        }
+
         for (int i = 0; i < itemList.size() && i < MAX_SUPPORT_ITEMS; i++) {
             BottomNavMenuItem item = itemList.get(i);
             attachBottomNavItem(item.getTitle(), ContextCompat.getDrawable(getContext(), item.getIcon()));
-        }
-
-        if(itemList.size() > MAX_SUPPORT_ITEMS) {
-            Log.d(TAG, "The BottomNavMenu component only supports up to five different menu items.");
         }
     }
 
