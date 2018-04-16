@@ -5,7 +5,7 @@ buildscript {
     ext {
         support_lib_version = "27.1.1"
 
-        bottomnav_library_version = "1.0.0-alpha1"
+        bottomnav_library_version = "1.0.0-beta1"
     }
 
     repositories {
