@@ -1,4 +1,4 @@
 include ':examples', ':library'
-project(":library").name = "core"
-project(":examples").name = "examples"
+project(":library").name = "bottomnav-core"
+project(":examples").name = "bottomnav-examples"
 rootProject.name = "bottomnav-library"
